@@ -1,0 +1,95 @@
+.weather {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 8px 16px;
+}
+
+.weather__min {
+    background: rgba(173, 216, 230, 0.5);
+}
+
+.weather__max {
+    background: rgba(255, 165, 0, 0.5);
+}
+
+.weather__spin {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    border-bottom-color: transparent;
+    margin-left: 8px;
+    animation: spin 1s infinite linear;
+}
+
+.weather__loading {
+    opacity: .5;
+}
+
+.weather__title {
+    display: flex;
+    align-items: center;
+}
+
+.weather__title h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.weather__description {
+    display: flex;
+}
+
+.weather__remove {
+    cursor: pointer;
+    position: absolute;
+    background: none;
+    border: none;
+    background-size: cover;
+    top: 4px;
+    right: 4px;
+    width: 36px;
+    height: 36px;
+    transition: background-color 0.2s ease;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-linejoin='round' d='M4.646 15.646l11-11'/%3E%3Cpath stroke='%23000' d='M4.354 4.646l11 11'/%3E%3C/svg%3E");
+}
+
+.weather__remove:hover {
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.weather__icon {
+    margin-right: 12px;
+    width: 50px;
+    height: 50px;
+}
+
+.weather__data {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.weather__updated {
+    color: #aaaaaa;
+    font-style: italic;
+}
+
+.weather__arrow {
+    background: url("./arrow.svg");
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
